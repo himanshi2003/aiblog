@@ -9,6 +9,8 @@ const app = express();
 const corsOptions = {
     origin: ["http://localhost:5174", "http://localhost:5173","http://localhost:5001"],
 };
+
+const PORT = process.env.PORT || 5001;
 app.use(cors(corsOptions));
 app.use(express.json());
 // Access your API key as an environment variable (see "Set up your API key" above)
@@ -32,4 +34,4 @@ app.post("/generate", async (req, res) => {
 });
 
 //!Start the server
-app.listen(5001, console.log("Server is running"));
+app.listen(5001, console.log(`Server is running on port ${PORT}`));
