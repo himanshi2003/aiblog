@@ -5,7 +5,7 @@ import "./App.css";
 import Markdown from 'react-markdown';
 
 const makeRequestAPI = async (prompt) => {
-  const res = await axios.post("http://localhost:5001/generate", { prompt });
+  const res = await axios.post("https://aiblog-o55l.onrender.com/", { prompt });
   console.log(res.data);
   return res.data;
 };
