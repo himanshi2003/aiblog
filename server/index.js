@@ -7,7 +7,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 //!Middlewares
 const corsOptions = {
-    origin: ["https://localhost:5001"],
+    origin: ["https://aiblog-beige.vercel.app", "https://localhost:5001"],
     methods: ["POST"],
     allowedHeaders: ["Content-Type"],
 };
